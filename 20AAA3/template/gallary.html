@@ -1,57 +1,184 @@
-{% extends 'indexmode.html' %}
-{% block content %}
-    <h1>Ukraine War</h1>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>donating team</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="description" content="we are a team" />
+    <meta name="keywords" content="very good donation team" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="../static/css/main1.css" rel="stylesheet" type="text/css" />
+    <script src="/static/js/cycle.js"></script>
+    <script>
+$(document).ready(function(){
+    $(".cycle").hover(function () {
+        $(".prev").fadeIn(200);
+        $(".next").fadeIn(200);
+    }, function () {
+        $(".prev").fadeOut(200);
+        $(".next").fadeOut(200);
+    });
+    $(".cycle ul").cycle({
+        fx: 'fade'
+        , speed: 600
+        , timeout: 3000
+        , prev: '.prev'
+        , next: '.next'
+    });
+    $(".slider ul").cycle({
+        fx: "fade"
+        , speed: 600
+        , timeout: 4000
+        , pager: ".slider ol"
+        , pagerAnchorBuilder: function (i, pic) {
+            return '<li>' + (i + 1) + '</li>';
+        }
+    });
+});
+</script>
+</head>
+<body>
+    <div class="main">
 
-    <h2>Photos</h2>
+<!--[if lt IE 8]>
+<script>alert("您正在使用的浏览器版本过低，请使用Chrome、Firefox或IE8及以上浏览器！")</script>
+<![endif]-->
+<img src="images/logo.png" class="logo" />
 
-    <div class="row">
-        <div class="column">
-            <img src="https://images.pexels.com/photos/11477794/pexels-photo-11477794.jpeg">
-            <img src="https://images.pexels.com/photos/11477799/pexels-photo-11477799.jpeg">
-            <img src="https://images.pexels.com/photos/11477792/pexels-photo-11477792.jpeg">
-            <img src="https://images.pexels.com/photos/14377758/pexels-photo-14377758.jpeg">
-         </div>
-         <div class="column">
-            <img src="https://images.pexels.com/photos/11477801/pexels-photo-11477801.jpeg">
-            <img src="https://images.pexels.com/photos/11284546/pexels-photo-11284546.jpeg">
-            <img src="https://images.pexels.com/photos/11284549/pexels-photo-11284549.jpeg">
-         </div>
-         <div class="column">
-            <img src="https://images.pexels.com/photos/11421244/pexels-photo-11421244.jpeg">
-            <img src="https://images.pexels.com/photos/11630368/pexels-photo-11630368.jpeg">
-            <img src="https://images.pexels.com/photos/11318288/pexels-photo-11318288.jpeg">
-         </div>
-         <div class="column">
-            <img src="https://images.pexels.com/photos/11421286/pexels-photo-11421286.jpeg">
-            <img src="https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg">
-            <img src="https://images.pexels.com/photos/11417861/pexels-photo-11417861.jpeg">
-         </div>
+<ul class="menuBar">
+    <li><a href="{{url_for('home')}}">home</a></li>
+    <li><a href="{{url_for('about')}}">about us</a></li>
+    <li><a href="{{url_for('gallary')}}">gallery</a></li>
+    <li><a href="{{url_for('contact')}}"><span>contact us</span></a></li>
+</ul>
+
+<div class="banner">
+    <img src="https://www.redcross.org.au/globalassets/donations/appeals/ukraine/ukraine-appeal-hero-ifrc-3x2.jpg?width=1200&height=630&mode=crop">
+</div>
+<div class="center">
+    <div class="notice">
+        <div>
+            <b>Latest News</b>
+        </div>
+        <ul>
+            
+                    <li>
+                        <span class="dot"></span>
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="Russia-Ukraine war: List of key events, day 406" href="https://www.aljazeera.com/news/2023/4/5/russia-ukraine-war-list-of-key-events-day-406">
+                                Russia-Ukraine war: List of key events, day 406
+                            </a>
+                        </b>
+                        <span class="date">2023-04-05</span>
+                        <p>
+                            As the Russia-Ukraine war enters its 406th day, we take a look at the main developments.
+                        </p>
+                    </li>
+
+                    <li>
+                        <span class="dot"></span>
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="April 4, 2023 - Russia-Ukraine news" href="https://www.cnn.com/europe/live-news/russia-ukraine-war-news-04-04-23/index.html">
+                                April 4, 2023 - Russia-Ukraine news
+                            </a>
+                        </b>
+                        <span class="date">2023-04-04</span>
+                        <p>
+                            Ukrainian soldier says high ground west of Bakhmut remains firmly in Ukraine's hands
+                        </p>
+                    </li>
+                
+                    <li>
+                        <span class="dot"></span>
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="Russia-Ukraine war at a glance: what we know on day 405 of the invasion" href="https://www.theguardian.com/world/2023/apr/04/russia-ukraine-war-at-a-glance-what-we-know-on-day-405-of-the-invasion">
+                                Russia-Ukraine war at a glance: what we know on day 405 of the invasion
+                            </a>
+                        </b>
+                        <span class="date">2023-04-04</span>
+                        <p>
+                            Finland formally joins Nato in Brussels ceremony; Russian investigators charge woman with terrorism offences over killing of military blogger Vladlen Tartarsky
+                        </p>
+                    </li>
+                
+                    <li>
+                        <span class="dot"></span>
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="The Latest: War in UkraineFinland Deals a Blow to Putin as It Enters NATO" href="https://www.nytimes.com/live/2023/04/04/world/russia-ukraine-war">
+                                The Latest: War in UkraineFinland Deals a Blow to Putin as It Enters NATO
+                            </a>
+                        </b>
+                        <span class="date">2023-04-04</span>
+                        <p>
+                            The military alliance expanded to 31 members on Tuesday, a strategic setback for President Vladimir V. Putin of Russia.
+                        </p>
+                    </li>
+                
+        </ul>
     </div>
-
-    <h2>Videos</h2>
-
-    <div class="video-container">
-        <div class="row">
-            <div class="column">
-                <div class="video">
-                    <iframe src="https://player.vimeo.com/external/573312093.sd.mp4?s=d2f5b504600af1d707c87f48aa3085f4052ffb3c&profile_id=164&oauth2_token_id=57447761" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                </div>
-            </div>
-            <div class="column">
-                <div class="video">
-                    <iframe src="https://vod-progressive.akamaized.net/exp=1680672753~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F508%2F29%2F727544029%2F3373430292.mp4~hmac=0a2bbff0847e1f5ded8ab00fbb67dd57602a2eab7d6d0a3ea230c6560a82d45f/vimeo-prod-skyfire-std-us/01/508/29/727544029/3373430292.mp4?filename=file.mp4" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                </div>
-            </div>
-            <div class="column">
-                <div class="video">
-                    <iframe src="https://vod-progressive.akamaized.net/exp=1680672863~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F509%2F29%2F727548664%2F3373450006.mp4~hmac=7541f813ff129429271844b74d72d6e71d88c64ba49c99445dda2fc73926caa5/vimeo-prod-skyfire-std-us/01/509/29/727548664/3373450006.mp4?filename=file.mp4" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                </div>
-            </div>
-            <div class="column">
-                <div class="video">
-                    <iframe src="https://vod-progressive.akamaized.net/exp=1680672969~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1589%2F28%2F707948564%2F3280618201.mp4~hmac=ca6e9dd9d67293c80d80685a53eee105d7631589c21a088a7c13f6e038d4b4b9/vimeo-prod-skyfire-std-us/01/1589/28/707948564/3280618201.mp4?filename=file.mp4" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                </div>
-            </div>
-        </div>       
+    <div class="news">
+        <div>
+            <b>Inside Ukraine</b>
+        </div>
+        <ul>
+            
+                    <li>
+                        <img src="https://i.cbc.ca/1.6800207.1680557910!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_780/shutterstock-large-file.jpg" />
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="Ukrainian women sheltering in London, Ont., say they were asked by the host if they wanted to do sex work" href="https://www.cbc.ca/news/canada/london/ukrainian-women-sheltering-in-london-ont-say-they-were-asked-by-the-host-if-they-wanted-to-do-sex-work-1.6799495">
+                                Ukrainian women sheltering in London, Ont., say they were asked by the host if they wanted to do sex work
+                            </a>
+                        </b>
+                        <span>
+                            2023-04-04
+                        </span>
+                        <p>
+                            London police say there's an 'active and ongoing investigation' into the allegations
+                        </p>
+                    </li>
+                
+                    <li>
+                        <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/7B8B/production/_129272613_47ae791cf95d2e84596c38a38bd76addfdbd40be0_0_4860_31951000x657.jpg.webp" />
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="Ukraine war: Who are Russia's war bloggers and why are they popular?" href="https://www.bbc.com/news/world-europe-65179954">
+                                Ukraine war: Who are Russia's war bloggers and why are they popular?
+                            </a>
+                        </b>
+                        <span>
+                            2023-04-04
+                        </span>
+                        <p>
+                            Vladlen Tatarsky, who died in an explosion in St Petersburg on Sunday, was one of Russia's "war correspondents". But who are these bloggers - and why are they popular?
+                        </p>
+                    </li>
+                
+                    <li>
+                        <img src="https://i.guim.co.uk/img/media/92afaf60cc71a09a42a5a06c98a0be9021aa07f9/0_46_5464_3278/master/5464.jpg?width=1900&quality=45&dpr=2&s=none" />
+                        <b>
+                            <a target="_blank" rel="noopener noreferrer" title="‘Rebuilding is part of our resistance’: how Ukraine is bringing Bucha back to life" href="https://www.theguardian.com/world/2023/apr/01/ukraine-rebuild-bucha-prompts-corruption-reconstruction">
+                                ‘Rebuilding is part of our resistance’: how Ukraine is bringing Bucha back to life
+                            </a>
+                        </b>
+                        <span>
+                            2023-04-01
+                        </span>
+                        <p>
+                            The town infamous for a massacre at hands of Russia has become a symbol of Ukraine’s reconstruction effort, but experts say the influx of money from the west will bring challenges in such a corrupt country
+                        </p>
+                    </li>
+                
+        </ul>
     </div>
-{% endblock %}
+</div>
+<div class="down">
+    <p>
+        site visited{amount}, total fund raised{money}, last donation{people},{number},{time}
+
+    </p>
+</div>
+
+    </div>
+</body>
+
+
