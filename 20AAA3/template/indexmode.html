@@ -8,41 +8,9 @@
     <meta name="description" content="we are a team" />
     <meta name="keywords" content="very good donation team" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link href="../static/css/main.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div class="main">
-
-<!--[if lt IE 8]>
-<script>alert("您正在使用的浏览器版本过低，请使用Chrome、Firefox或IE8及以上浏览器！")</script>
-<![endif]-->
-<img src="images/logo.png" class="logo" />
-
-<ul class="menuBar">
-    <li><a href="{{url_for('home')}}">home</a></li>
-    <li><a href="{{url_for('about')}}">about us</a></li>
-    <li><a href="{{url_for('gallary')}}">gallary</a></li>
-    <li><a href="{{url_for('contact')}}"><span>contact us</span></a></li>
-</ul>
-
-{% block content %}
-{% endblock %}
-                <div class="down">
-    <p>
-        site visited{amount}, total fund raised{money}, last donation{people},{number},{time}
-
-    </p>
-</div>
-
-    </div>
-</body>
-
-
-
-
-
-<script src="Scripts/jquery.cycle.all.min.js"></script>
-<script>
+    <link href="../static/css/main0.css" rel="stylesheet" type="text/css" />
+    <script src="/static/js/cycle.js"></script>
+    <script>
 $(document).ready(function(){
     $(".cycle").hover(function () {
         $(".prev").fadeIn(200);
@@ -69,4 +37,37 @@ $(document).ready(function(){
     });
 });
 </script>
+</head>
+<body>
+    <div class="main">
+
+<!--[if lt IE 8]>
+<script>alert("您正在使用的浏览器版本过低，请使用Chrome、Firefox或IE8及以上浏览器！")</script>
+<![endif]-->
+<img src="images/logo.png" class="logo" />
+
+<ul class="menuBar">
+    <li><a href="{{url_for('home')}}">home</a></li>
+    <li><a href="{{url_for('about')}}">about us</a></li>
+    <li><a href="{{url_for('gallary')}}">gallery</a></li>
+    <li><a href="{{url_for('contact')}}"><span>contact us</span></a></li>
+</ul>
+
+{% block content %}
+{% endblock %}
+                <div class="down">
+    <p>
+        site visited{amount}, total fund raised{money}, last donation{people},{number},{time}
+
+    </p>
+</div>
+
+    </div>
+</body>
+
+
+
+
+
+
 </html>
