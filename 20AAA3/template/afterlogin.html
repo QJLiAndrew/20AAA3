@@ -1,0 +1,22 @@
+{% extends 'logmod.html' %}
+{% block content %}
+<h2 class="text-uppercase text-center mb-5" xmlns="http://www.w3.org/1999/html">hello {{ name }} </br></h2>
+<div>
+    <p>
+    you have made {{count}} payments<br>
+    your total amount payment is {{amount}}<br>
+    </p>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">donate for children</a></button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">donate for rebuilding society</a> </button>
+    </div>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">donate for the poor</a></button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">track for my donation</a></button>
+    </div>
+</div>
+{% endblock %}
